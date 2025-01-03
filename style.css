@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    background-color: #222;
+    font-family: sans-serif;
+}
+h1{
+    font-size: 40px;
+}
+.container{
+    
+    background-image:linear-gradient(135deg,#00feba,#5b548a);
+    /*box-shadow: 0 0 20px rgba(5,140,104,0.9);*/
+   
+    color: #fff;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+}
+form{
+    display: flex;
+    justify-content: center;/*to align in x-axis*/
+    align-items: center;/*to align in y-axis*/
+    margin-bottom: 20px;
+}
+form input[type="text"]{
+    padding: 10px;
+    border: none;
+    outline: none;/*so that when we click on it then also we do not see the outer line*/
+    border-radius: 20px;
+    background-color: #ebfffc;
+    font-size: 18px;
+    width: 60%;
+}
+form input[type="submit"]{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #ebfffc;
+    border-radius: 20px;
+    margin-left: 30px;
+    font-size: 18px;
+    transition: background-color .3s ease-in-out;
+}
+form input[type="submit"]:hover{
+    background-color: darkgrey;
+
+}
+.icon img{
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;/*to prevent repeating images*/
+    background-position: center center;/*at centre both vertically and horiontally*/
+}
+.temperature{
+
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;/*20px for top and bottom margin and 0 px for left and right margin*/
+}
+.description{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.details{
+    display: flex;
+    justify-content: center;/*to make thenm to center horizontally*/
+    align-items: center;/*to align in center vertically*/
+    flex-wrap: wrap;/*depending on the space available its children(the three divs) will automatically shift to new line , for example if we zoom it may happen that two divs come in one line and the third div comes in the next line and if we zoom further then they may come below each other*/
+
+}
+.details > div{/*to access all the divs inside the class details*/
+    padding: 20px;
+   margin: 10px;
+   flex: 1;/*will use the entire space, will cover the entire thing*/
+   text-align: center;
+   font-size: 25px;
+
+}
+@media(max-width:768px)/*for view in different devices, if width is less than 768 px then do the  following thing*/
+{
+    form{
+        flex-direction: column;/*to arrange them below ecach other*/
+    }
+    form input[type="text"]{
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+
+}
